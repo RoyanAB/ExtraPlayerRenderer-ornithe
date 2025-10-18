@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "explayerenderer",
+	"version": "3.0.0",
+
+	"name": "ExtraPlayerRenderer",
+	"description": "Render an extra player figure on your screen. Made for game streaming and recordings.",
+	"authors": [
+		"Lucun_Ji",
+		"AB"
+	],
+	"contributors": [
+		"Fallen_Breath",
+		"X-Green",
+		"altrisi",
+		"plusls"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/extraplayerrenderer",
+		"sources": "https://github.com/LucunJi/ExtraPlayerRenderer",
+		"issues": "https://github.com/LucunJi/ExtraPlayerRenderer/issues"
+	},
+
+	"license": "LGPL-3.0-or-later",
+	"icon": "assets/explayerenderer/icon.png",
+
+	"environment": "client",
+	"entrypoints": {
+		"client-init": [
+			"github.io.lucunji.explayerenderer.Main"
+		],
+		"modmenu": [
+			"github.io.lucunji.explayerenderer.compat.modmenu.ModMenuApiImpl"
+		]
+	},
+	"mixins": [
+		"explayerenderer.mixins.json"
+	],
+
+	"depends": {
+		"minecraft": "1.12.x",
+		"malilib": ">=0.60.2",
+		"osl-entrypoints": "*",
+		"osl-resource-loader": "*"
+	}
+}

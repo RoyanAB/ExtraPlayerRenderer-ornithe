@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "github.io.lucunji.explayerenderer.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "client": [
+    "EntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "EntityAccessor"
+  ]
+}
