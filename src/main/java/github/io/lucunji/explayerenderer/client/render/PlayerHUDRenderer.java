@@ -57,7 +57,6 @@ public class PlayerHUDRenderer {
             float prevPitch = targetEntity.prevRotationPitch;
             float headYaw = targetEntity.rotationYawHead;
             float handSwingProgress = targetEntity.swingProgress;
-            int hurtTime = targetEntity.hurtResistantTime;
 
             GlStateManager.rotate(lightDegree, 0.0F, 1.0F, 0.0F);
             RenderHelper.enableStandardItemLighting();
@@ -69,10 +68,6 @@ public class PlayerHUDRenderer {
 
             if (!Configs.SWING_HANDS.getBooleanValue())
                 targetEntity.swingProgress = 0;
-
-            if (!Configs.HURT_FLASH.getBooleanValue()) {
-                targetEntity.hurtTime = 0;
-            }
 
             GlStateManager.rotate(((float) Configs.ROTATION_X.getDoubleValue()), 1.0F, 0.0F, 0.0F);
             GlStateManager.rotate(((float) Configs.ROTATION_Y.getDoubleValue()), 0.0F, 1.0F, 0.0F);
@@ -95,7 +90,6 @@ public class PlayerHUDRenderer {
             targetEntity.prevRotationPitch = prevPitch;
             targetEntity.rotationYawHead = headYaw;
             targetEntity.swingProgress = handSwingProgress;
-            targetEntity.hurtTime = hurtTime;
         }
 
         GlStateManager.popMatrix();

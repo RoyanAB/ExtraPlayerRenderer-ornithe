@@ -34,7 +34,6 @@ public class Configs {
     public static final DoubleConfig SNEAKING_OFFSET_Y;
     public static final DoubleConfig ELYTRA_OFFSET_Y;
 
-    public static final BooleanConfig HURT_FLASH;
     public static final BooleanConfig SWING_HANDS;
     public static final DoubleConfig LIGHT_DEGREE;
 
@@ -64,7 +63,6 @@ public class Configs {
         SNEAKING_OFFSET_Y = Category.DETAILS.add(new DoubleConfig("sneakingYOffset", -30, -100, 100, "explayerenderer.gui.settings.sneaking_y_offset.desc"));
         ELYTRA_OFFSET_Y = Category.DETAILS.add(new DoubleConfig("elytraYOffset", -120, -300, 300, "explayerenderer.gui.settings.elytra_y_offset.desc"));
 
-        HURT_FLASH = Category.DETAILS.add(new BooleanConfig("hurtFlash", true, "explayerenderer.gui.settings.hurt_flash.desc"));
         SWING_HANDS = Category.DETAILS.add(new BooleanConfig("swingHands", true, "explayerenderer.gui.settings.swing_hands.desc"));
         LIGHT_DEGREE = Category.DETAILS.add(new DoubleConfig("lightDegree", 0, -180, 180, "explayerenderer.gui.settings.light_degree.desc"));
 
