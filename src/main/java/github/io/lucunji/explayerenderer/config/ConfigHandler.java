@@ -9,7 +9,7 @@ import malilib.config.util.JsonConfigUtils;
 import malilib.util.data.ModInfo;
 import malilib.util.data.json.JsonUtils;
 
-import java.io.*;
+import java.io.File;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -40,7 +40,8 @@ public class ConfigHandler implements ModConfig {
         if (settingFile.isFile() && settingFile.exists()) {
             JsonElement jsonElement = JsonUtils.parseJsonFile(configFile);
             if (jsonElement instanceof JsonObject) {
-                JsonConfigUtils.loadFromFile(configFile, this.getConfigOptionCategories(), (a,b) ->{});
+                JsonConfigUtils.loadFromFile(configFile, this.getConfigOptionCategories(), (a, b) -> {
+                });
             }
         }
     }

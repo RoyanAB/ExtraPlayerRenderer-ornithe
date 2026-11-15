@@ -13,7 +13,7 @@ public class Main implements ClientModInitializer {
     public static PlayerHUDRenderer playerHUDRenderer;
 
     @Override
-    public void initClient(){
+    public void initClient() {
         Registry.CONFIG_MANAGER.registerConfigHandler(new ConfigHandler());
         new Configs();  // just load the class and run static code block
         Registry.HOTKEY_MANAGER.registerHotkeyProvider(KeyBindProvider.INSTANCE);

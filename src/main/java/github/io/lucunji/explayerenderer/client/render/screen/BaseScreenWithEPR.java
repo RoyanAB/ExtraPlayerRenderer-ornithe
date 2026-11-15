@@ -19,14 +19,13 @@ public class BaseScreenWithEPR extends BaseConfigScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         Main.playerHUDRenderer.doRender(partialTicks);
-        super.drawScreen(mouseX,mouseY,partialTicks);
+        super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
     public static BaseScreenWithEPR withExtensionModTabs(ModInfo modInfo,
-                                                        List<? extends ScreenTab> configTabs,
-                                                        @Nullable ConfigTab defaultTab,
-                                                        String titleKey, Object... args)
-    {
+                                                         List<? extends ScreenTab> configTabs,
+                                                         @Nullable ConfigTab defaultTab,
+                                                         String titleKey, Object... args) {
         List<? extends ScreenTab> extraTabs = Registry.CONFIG_TAB.getExtraConfigScreenTabsFor(modInfo);
         List<ScreenTab> allTabs = ListUtils.getAppendedList(configTabs, extraTabs);
         return new BaseScreenWithEPR(modInfo, allTabs, defaultTab, titleKey, args);

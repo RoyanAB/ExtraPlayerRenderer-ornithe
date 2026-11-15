@@ -18,7 +18,7 @@ public enum Category {
         configs = new ArrayList<>();
     }
 
-    protected <T extends ConfigOption<?>> T add(T config) {
+    <T extends ConfigOption<?>> T add(T config) {
         this.configs.add(config);
         return config;
     }

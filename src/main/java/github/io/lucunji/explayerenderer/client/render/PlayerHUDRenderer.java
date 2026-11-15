@@ -19,7 +19,8 @@ public class PlayerHUDRenderer {
     }
 
     public void doRender(float tickDelta) {
-        if (Minecraft.getMinecraft().world == null || Minecraft.getMinecraft().player == null || !Configs.ENABLED.getBooleanValue()) return;
+        if (Minecraft.getMinecraft().world == null || Minecraft.getMinecraft().player == null || !Configs.ENABLED.getBooleanValue())
+            return;
         EntityLivingBase targetEntity = Minecraft.getMinecraft().world.playerEntities.stream().filter(p -> p.getName().equals(Configs.PLAYER_NAME.getValue())).findFirst().orElse(Minecraft.getMinecraft().player);
         if (Configs.SPECTATOR_AUTO_SWITCH.getBooleanValue() && Minecraft.getMinecraft().player.isSpectator()) {
             Entity cameraEntity = Minecraft.getMinecraft().getRenderViewEntity();
@@ -34,7 +35,7 @@ public class PlayerHUDRenderer {
         int scaledHeight = scaledResolution.getScaledHeight();
         double posX = Configs.OFFSET_X.getDoubleValue() * scaledWidth;
         double posY = Configs.OFFSET_Y.getDoubleValue() * scaledHeight;
-        if (((EntityAccessor)targetEntity).epr_getFlag(7))
+        if (((EntityAccessor) targetEntity).epr_getFlag(7))
             posY += Configs.ELYTRA_OFFSET_Y.getDoubleValue();
         else if (targetEntity.isSneaking())
             posY += Configs.SNEAKING_OFFSET_Y.getDoubleValue();

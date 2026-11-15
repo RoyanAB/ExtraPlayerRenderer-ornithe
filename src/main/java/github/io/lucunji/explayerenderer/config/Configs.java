@@ -5,7 +5,10 @@ import com.google.common.collect.ImmutableList;
 import github.io.lucunji.explayerenderer.Reference;
 import malilib.config.category.BaseConfigOptionCategory;
 import malilib.config.category.ConfigOptionCategory;
-import malilib.config.option.*;
+import malilib.config.option.BooleanConfig;
+import malilib.config.option.DoubleConfig;
+import malilib.config.option.HotkeyConfig;
+import malilib.config.option.StringConfig;
 import malilib.input.KeyBindSettings;
 
 import java.util.List;
@@ -67,8 +70,8 @@ public class Configs {
         LIGHT_DEGREE = Category.DETAILS.add(new DoubleConfig("lightDegree", 0, -180, 180, "explayerenderer.gui.settings.light_degree.desc"));
 
         CATEGORIES = ImmutableList.of(
-                BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Generic",          Category.GENERAL.getConfigs()),
-                BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Detail",          Category.DETAILS.getConfigs())
+                BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Generic", Category.GENERAL.getConfigs()),
+                BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Detail", Category.DETAILS.getConfigs())
         );
     }
 }

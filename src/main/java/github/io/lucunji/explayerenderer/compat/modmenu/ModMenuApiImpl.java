@@ -7,8 +7,7 @@ import malilib.gui.BaseScreen;
 
 public class ModMenuApiImpl implements ModMenuApi {
     @Override
-    public ConfigScreenFactory<?> getModConfigScreenFactory()
-    {
+    public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return (currentScreen) -> {
             BaseScreen screen = GuiConfig.create();
             screen.setParent(currentScreen);

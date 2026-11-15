@@ -12,8 +12,8 @@ import malilib.util.data.ModInfo;
 public class GuiConfig {
     public static final ModInfo MOD_INFO = Reference.MOD_INFO;
 
-    private static final BaseConfigTab GENERIC              = new BaseConfigTab(MOD_INFO, "generic",    160, Category.GENERAL.getConfigs(),       GuiConfig::create);
-    private static final BaseConfigTab DETAILS               = new BaseConfigTab(MOD_INFO, "detail", 100, Category.DETAILS.getConfigs(), GuiConfig::create);
+    private static final BaseConfigTab GENERIC = new BaseConfigTab(MOD_INFO, "generic", 160, Category.GENERAL.getConfigs(), GuiConfig::create);
+    private static final BaseConfigTab DETAILS = new BaseConfigTab(MOD_INFO, "detail", 100, Category.DETAILS.getConfigs(), GuiConfig::create);
 
     public static final ImmutableList<ConfigTab> CONFIG_TABS = ImmutableList.of(
             GENERIC,
@@ -25,21 +25,18 @@ public class GuiConfig {
             DETAILS
     );
 
-    public static void open()
-    {
+    public static void open() {
         BaseScreen.openScreen(create());
     }
 
-    public static BaseScreen create()
-    {
+    public static BaseScreen create() {
         // The parent screen should not be set here, to prevent infinite recursion via
         // the call to the parent's setWorldAndResolution -> initScreen -> switch tab -> etc.
         return BaseScreenWithEPR.withExtensionModTabs(MOD_INFO, ALL_TABS, GENERIC,
                 "explayerenderer.title.screen.configs", Reference.MOD_ID);
     }
 
-    public static ImmutableList<ConfigTab> getConfigTabs()
-    {
+    public static ImmutableList<ConfigTab> getConfigTabs() {
         return CONFIG_TABS;
     }
 }

@@ -2,8 +2,7 @@ package github.io.lucunji.explayerenderer;
 
 import malilib.util.data.ModInfo;
 
-public class Reference
-{
+public class Reference {
     public static final String MOD_ID = "explayerenderer";
     public static final String MOD_NAME = "ExtraPlayerRenderer";
 
